@@ -1,0 +1,20 @@
+{
+    "files.autoSave": "afterDelay",
+    "editor.fontSize": 16,
+    "editor.smoothScrolling": true,
+    "editor.stickyTabStops": true,
+    "editor.stablePeek": true,
+    "editor.cursorSmoothCaretAnimation": true,
+    "editor.formatOnPaste": true,
+    "editor.formatOnSave": true,
+    "editor.formatOnType": true,
+    "diffEditor.codeLens": true,
+    "editor.suggest.localityBonus": true,
+    "editor.suggest.preview": true,
+    "editor.suggest.shareSuggestSelections": true,
+    "editor.suggest.showStatusBar": true,
+    "files.autoGuessEncoding": true,
+    "files.simpleDialog.enable": true,
+    "files.trimFinalNewlines": true,
+    "files.trimTrailingWhitespace": true
+}
