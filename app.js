@@ -1,59 +1,19 @@
-console.log(true, false, "true", "false");
-let email = "supratim.paul0391@gmail.com";
-let names = ["Mario", "Ted", "Ken"];
+let score = "100";
+// From string to number conversion
+// score = Number(score);
+score = +score;
+console.log(score + 1);
+console.log(typeof score);
+
 let result;
-// result = email.includes('@');
-result = names.includes("ken");
-console.log(result);
-
-// comparison operators
-let age = 25;
-console.log(age == 25);       // returns true
-console.log(age == 30);       // returns false
-console.log(age != 30);       // returns true
-console.log(age > 20);        // returns true
-console.log(age < 20);        // returns false
-console.log(age <= 25);       // returns true
-console.log(age >= 25);       // returns true
-console.log(age > 25);        // returns false
-console.log(age < 25);        // returns false
-
-console.log('===========');
-let name = 'shaun';
-console.log(name == 'shaun');       // returns true
-console.log(name == 'Shaun');       // returns false
-console.log(name != 'Shaun');       // returns true
-console.log(name != 'shaun');       // returns false
-console.log(name > 'crystal');      // returns true
-console.log(name > 'Shaun');        // returns true
-console.log(name > 'Crystal');      // returns true
-console.log(name >= 'Shaun');       // returns true
-console.log(name >= 'Crystal');     // returns true
-console.log(name <= 'Shaun');       // returns false
-console.log(name <= 'Crystal');     // returns false
-console.log(name < 'Shaun');        // returns false
-console.log(name < 'Crystal');      // returns false
-
-console.log('===========')
-// Loose comparison or loosely type
-console.log(age == 25);         // returns true
-console.log(age == "25");       // returns true
-console.log(age != 25);         // returns false
-console.log(age != "25");       // returns false
-// Strict comparison or strict type
-console.log(age === 25);         // returns true
-console.log(age === "25");       // returns false
-console.log(age !== 25);         // returns false
-console.log(age !== "25");       // returns true
-
-console.log('==========');
-// Loose comparison or loosely type
-console.log(age == 24);         // returns false
-console.log(age == "24");       // returns false
-console.log(age != 24);         // returns true
-console.log(age != "24");       // returns true
-// Strict comparison or strict type
-console.log(age === 24);         // returns false
-console.log(age === "24");       // returns false
-console.log(age !== 24);         // returns true
-console.log(age !== "24");       // returns true
+// result = Number("Hello");          // returns NaN, type 'number'
+// result = String(50);               // returns "50", type 'string'
+// result = `${score}`;
+// result = Boolean(100);             // returns true, type 'boolean
+// result = !!100;
+// result = Boolean(0);              // return false, type 'boolean'
+// result = Boolean('0');               // returns true, type 'boolean'
+// result = Boolean('');             // returns false, type 'boolean'
+// result = Boolean(undefined);        // returns false, type 'boolean'
+result = Boolean(null);             // returns false, type 'boolean'
+console.log(result, typeof result);
