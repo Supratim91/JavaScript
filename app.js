@@ -1,36 +1,17 @@
-// switch-case statement
-const grade = "A";
-switch (grade) {
-    case "A":
-        console.log("You have performed excellent acheivements");
-        break;
-    case "B":
-        console.log("You have performed good acheievements");
-        break;
-    case "C":
-        console.log("You have performed average acheivements");
-        break;
-    case "D":
-        console.log("You have performed you can do better");
-        break;
-    case "E":
-        console.log("You have performed grade E");
-        break;
-    default:
-        console.log("Invalid grade");
+let age = 30;           // global scope
+
+if (true) {
+
+    let age = 40;
+    let name = 'shaun';
+    console.log('inside 1st code block:', age, name);
+
+    if (true) {
+
+        let age = 50;
+        console.log('inside 2nd code block:', age, name);
+
+    }
+
 }
-
-
-// using if statements
-// if(grade === 'A'){
-// } else if(grade === 'B'){
-
-// } else if(grade === 'C'){
-
-// } else if(grade === 'D'){
-
-// } else if(grade === 'E'){
-
-// } else {
-
-// }
+console.log('outside code block:', age, name);
