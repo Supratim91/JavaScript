@@ -1,15 +1,36 @@
-// break & continue
-const scores = [50, 25, 0, 30, 100, 20, 10];
-for (let i = 0; i < scores.length; i++) {
-
-    if (scores[i] === 0) {
-        continue;
-    }
-
-    console.log('your score:', scores[i]);
-
-    if (scores[i] === 100) {
-        console.log('congrats, you got the top score!');
+// switch-case statement
+const grade = "A";
+switch (grade) {
+    case "A":
+        console.log("You have performed excellent acheivements");
         break;
-    }
+    case "B":
+        console.log("You have performed good acheievements");
+        break;
+    case "C":
+        console.log("You have performed average acheivements");
+        break;
+    case "D":
+        console.log("You have performed you can do better");
+        break;
+    case "E":
+        console.log("You have performed grade E");
+        break;
+    default:
+        console.log("Invalid grade");
 }
+
+
+// using if statements
+// if(grade === 'A'){
+// } else if(grade === 'B'){
+
+// } else if(grade === 'C'){
+
+// } else if(grade === 'D'){
+
+// } else if(grade === 'E'){
+
+// } else {
+
+// }
