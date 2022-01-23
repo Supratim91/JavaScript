@@ -102,11 +102,35 @@ console.log("================"); */
 also check the output of the function with radius 2.5
 Formulae: Area = PI * r ** 2
 Convert this function to an arrow function */
-function circle(area) {
-    let PI = 22 / 7, radius = 5;
+/* const PI = 22 / 7;
+function circle(radius) {
     let r = radius;
-    area = PI * r ** 2;
-    console.log("Area of the circle is = " + area);
+    const area = PI * r ** 2;
+    console.log("Area of the circle is = " + area + " and radius is = " + r);
 }
 circle();
+circle(5);
+circle(2.5);
+circle("");
+circle(NaN);
+circle(NaN = 5);
+circle(undefined);
+circle(undefined = 2.5);
+console.log("================"); */
+
+const PI = 3.14;
+const circle = (radius) => {
+    let r = radius;
+    const area = PI * r ** 2;
+    const circumference = 2 * PI * r;
+    console.log("Area of the circle is = " + area + ", circumference is = " + circumference + " and radius is = " + r);
+}
+circle();
+circle(5);
+circle(2.5);
+circle("");
+circle(NaN);
+circle(NaN = 5);
+circle(undefined);
+circle(undefined = 2.5);
 console.log("================");
