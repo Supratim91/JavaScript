@@ -1,5 +1,5 @@
 const article = document.querySelector('article');
-console.log(article.children);      // nodeList
+console.log(article.children);
 Array.from(article.children).forEach(element => {
     element.classList.add('article-element');
 });
