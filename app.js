@@ -1,19 +1,14 @@
-const article = document.querySelector('article');
-console.log(article.children);
-Array.from(article.children).forEach(element => {
-    element.classList.add('article-element');
+const btn = document.querySelector('button');
+btn.addEventListener('click', (ev) => {
+    console.log("Button is clicked");
+    console.log(ev.target.innerText);
 });
 
-const h2Tag = document.querySelector('h2');
-console.log(h2Tag.parentElement);
-console.log(h2Tag.parentElement.parentElement);
-console.log(h2Tag.nextElementSibling);
-console.log(h2Tag.previousElementSibling);
-
-// chaining
-// h2Tag nextElementSibling parentElement children
-console.log(h2Tag.nextElementSibling.parentElement.children);
-
-// chaining
-// h2Tag previousElementSibling parentElement children
-console.log(h2Tag.previousElementSibling.parentElement.children);
+const listItems = document.querySelectorAll('li');
+listItems.forEach(element => {
+    element.addEventListener('dblclick', (ev) => {
+        console.log("From lists clicked:" + ev.target.innerText);
+        console.log(element);
+        ev.target.innerText = "Gardening";
+    });
+});
