@@ -1,93 +1,45 @@
-// HTML button create "Track me", JS eventlistener add click
-// Asynchronous method handling using callback
-const button = document.querySelector('button');
-button.addEventListener('dblclick', trackUserHandler);
-function trackUserHandler() {
-    navigator.geolocation.getCurrentPosition((positionData) => {
-        console.log(positionData);
-    }, (error) => {
-        console.log(error);
-    });
-}
+const user1 = {
+    user: "John Doe",
+    email: "johndoe92@",
+    login() { console.log("User logged in: "); },
+    logout: function () { console.log("User logged out: "); }
+};
 
+class User {
+    constructor(userName, mail) {
+        this.user = userName;
+        this.email = mail;
+        this.score = 0;
+    };
+    login() {
+        console.log(`${this.user} logged in. `);
+    };
+    logout = function () {
+        console.log(`${this.user} logged out. `);
+    };
+    initscore = function () {
+        this.score += 1;
+        console.log(`${this.user} has scored ${this.score}.`);
+    };
+};
+const user2 = new User("Shaon", "shaon01@gmail.com");
+const user3 = new User("Abhijit", "abhijit02@gmail.com");
+user2.login();
+user3.logout();
+user2.initscore();
+user3.initscore();
 
-// Asynchronous method handling using promise-then
-const getPosition = () => {
-    const promise = new Promise((resolve, reject) => {
-        navigator.geolocation.getCurrentPosition((positionData) => {
-            resolve(positionData);
-            // reject("Error occurred");
-        }, (error) => {
-            // reject("Error occurred", error);
+class Admin extends User {
+    constructor(userName, mailId) {
+        super(userName, mailId);
+    };
+    delete(user) {
+        users = users.filter(u => {
+            return (u.user !== user.user);
         });
-    });
-    return promise;
-}
-function trackUserHandlerPromise() {
-    getPosition()
-        .then(data => {
-            console.log(data);
-        })
-        .catch(err => {
-            console.log(err);
-        })
-        .finally(() => {
-            console.log("Finally called");
-        });
-}
-button.addEventListener('dblclick', trackUserHandlerPromise);
-
-
-// Asynchronous method handling using async/await
-async function trackUserHandlerAsync() {
-    try {
-        const data = await getPosition();
-        console.log(data);
-    }
-    catch (error) {
-        console.log(error);
-    }
-}
-button.addEventListener('dblclick', trackUserHandlerAsync);
-
-
-// Another example of promise-then
-fetch('https://jsonplaceholder.typicode.com/todos/1')
-    .then(response => {
-        return response.json();
-    })
-    .then(json => {
-        console.log(json);
-    })
-    .catch(error => {
-        console.log(error);
-    });
-
-
-// Another example of above coding by using of async/await
-async function getTODOS() {
-    try {
-        const response = await fetch('https://jsonplaceholder.typicode.com/todos/1');
-        const data = await response.json();
-        console.log(data);
-    }
-    catch (error) {
-        console.log(error);
-    }
-}
-getTODOS();
-
-
-
-/* console.log("One");
-console.log("Two");
-// Asynchronous Function
-setTimeout(() => {
-    console.log("Callback fire");
-}, 0000);
-function handler() {
-    console.log("Callback fire");
-}
-setTimeout(handler, 2000);
-console.log("Three");
-console.log("Four"); */
+    };
+};
+const user4 = new Admin("Rohit", "rohit03@gmail.com");
+let users = [user1, user2, user3, user4];
+user4.delete(user2);
+console.log(users);
